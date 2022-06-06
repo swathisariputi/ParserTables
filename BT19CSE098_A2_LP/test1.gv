@@ -1,0 +1,18 @@
+digraph automaton {
+	node [shape=record]
+	I0 [label=<<I>I</I><SUB>0</SUB><BR/><I>S'</I> &#8594; . <I>S</I><BR ALIGN="LEFT"/><I> S</I> &#8594; . <I>A</I><BR ALIGN="LEFT"/><I> A</I> &#8594; . <I>A</I> <B>d</B><BR ALIGN="LEFT"/><I> A</I> &#8594; . <B>a</B> <I>B</I><BR ALIGN="LEFT"/>>]
+	I1 [label=<<I>I</I><SUB>1</SUB><BR/><I> S</I> &#8594; <I>A</I> .<BR ALIGN="LEFT"/><I> A</I> &#8594; <I>A</I> . <B>d</B><BR ALIGN="LEFT"/>>]
+	I2 [label=<<I>I</I><SUB>2</SUB><BR/><I>S'</I> &#8594; <I>S</I> .<BR ALIGN="LEFT"/>>]
+	I3 [label=<<I>I</I><SUB>3</SUB><BR/><I> A</I> &#8594; <B>a</B> . <I>B</I><BR ALIGN="LEFT"/><I> B</I> &#8594; . <B>b</B><BR ALIGN="LEFT"/>>]
+	I4 [label=<<I>I</I><SUB>4</SUB><BR/><I> A</I> &#8594; <I>A</I> <B>d</B> .<BR ALIGN="LEFT"/>>]
+	I5 [label=<<I>I</I><SUB>5</SUB><BR/><I> A</I> &#8594; <B>a</B> <I>B</I> .<BR ALIGN="LEFT"/>>]
+	I6 [label=<<I>I</I><SUB>6</SUB><BR/><I> B</I> &#8594; <B>b</B> .<BR ALIGN="LEFT"/>>]
+	I0 -> I3 [label=<<B>a</B>>]
+	I0 -> I1 [label=<<I>A</I>>]
+	I0 -> I2 [label=<<I>S</I>>]
+	I1 -> I4 [label=<<B>d</B>>]
+	acc [label=<<B>accept</B>> shape=none]
+	I2 -> acc [label="$"]
+	I3 -> I6 [label=<<B>b</B>>]
+	I3 -> I5 [label=<<I>B</I>>]
+}

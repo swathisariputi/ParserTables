@@ -1,0 +1,20 @@
+S->dZ
+S->Z
+Z->abZ
+Z->bcZ
+Z->^
+
+FIRST OF : S^ a b d 
+FIRST OF : Z^ a b 
+
+FOLLOW OF : S$ 
+FOLLOW OF : Z$ 
+
+
+	**************** LL(1) PARSING parse_table *******************
+
+	  $	  a	  b	  c	  d	  
+S	S->Z    S->Z    S->Z        	S->dZ    
+Z	Z->^    Z->abZ    Z->bcZ        	    	
+Given Input Stringbcbc
+STRING IS ACCEPTED

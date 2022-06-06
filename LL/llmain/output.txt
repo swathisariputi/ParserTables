@@ -1,0 +1,14 @@
+S->(S)
+S->^
+
+FIRST OF : S( ^ 
+
+FOLLOW OF : S$ ) 
+
+
+	**************** LL(1) PARSING parse_table *******************
+
+	  $	  (	  )	  
+S	S->^    S->(S)    S->^    
+Given Input String(())
+STRING IS ACCEPTED

@@ -1,0 +1,15 @@
+digraph automaton {
+	node [shape=record]
+	I0 [label=<<I>I</I><SUB>0</SUB><BR/><I>S'</I> &#8594; . <I>S</I><BR ALIGN="LEFT"/><I> S</I> &#8594; .<BR ALIGN="LEFT"/><I> S</I> &#8594; . <B>(</B> <I>S</I> <B>)</B><BR ALIGN="LEFT"/>>]
+	I1 [label=<<I>I</I><SUB>1</SUB><BR/><I> S</I> &#8594; .<BR ALIGN="LEFT"/><I> S</I> &#8594; . <B>(</B> <I>S</I> <B>)</B><BR ALIGN="LEFT"/><I> S</I> &#8594; <B>(</B> . <I>S</I> <B>)</B><BR ALIGN="LEFT"/>>]
+	I2 [label=<<I>I</I><SUB>2</SUB><BR/><I>S'</I> &#8594; <I>S</I> .<BR ALIGN="LEFT"/>>]
+	I3 [label=<<I>I</I><SUB>3</SUB><BR/><I> S</I> &#8594; <B>(</B> <I>S</I> . <B>)</B><BR ALIGN="LEFT"/>>]
+	I4 [label=<<I>I</I><SUB>4</SUB><BR/><I> S</I> &#8594; <B>(</B> <I>S</I> <B>)</B> .<BR ALIGN="LEFT"/>>]
+	I0 -> I1 [label=<<B>(</B>>]
+	I0 -> I2 [label=<<I>S</I>>]
+	I1 -> I1 [label=<<B>(</B>>]
+	I1 -> I3 [label=<<I>S</I>>]
+	acc [label=<<B>accept</B>> shape=none]
+	I2 -> acc [label="$"]
+	I3 -> I4 [label=<<B>)</B>>]
+}

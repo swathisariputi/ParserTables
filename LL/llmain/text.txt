@@ -1,0 +1,7 @@
+##
+TERMINAL S 
+NON TERMINAL ( )
+S->A|BS|a
+A->Ac|bB
+B->cBd|^
+##
